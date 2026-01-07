@@ -1,6 +1,6 @@
 # Prévision de la volatilité et market timing du facteur Momentum
 
-Prévision de la volatilité du facteur Momentum à l’aide de modèles économétriques et de machine learning, et analyse de leur valeur économique au moyen de stratégies de volatility targeting.
+Prévision de la volatilité du facteur Momentum à l’aide de modèles économétriques et de machine learning, et évaluation de leur impact sur la performance et le contrôle du risque à travers des stratégies de volatility targeting.
 
 ## Objectif
 
