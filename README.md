@@ -27,7 +27,7 @@ L’objectif est d’évaluer à la fois la qualité statistique des prévisions
 
 ## Données
 
-Les données utilisées incluent :
+Les données sont journalières (1990-2025) et incluent :
 - le facteur Momentum et les facteurs Fama–French (Kenneth French Data Library),
 - des variables macro-financières et de marché (taux d’intérêt, spreads de crédit, VIX, taux de change).
 
