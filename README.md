@@ -16,6 +16,7 @@ L’objectif est d’évaluer à la fois la qualité statistique des prévisions
   - l’évaluation des performances hors échantillon,
   - l’application à des stratégies de volatility targeting.
 - `Prévoir la volatilité pour le market timing du facteur Momentum.pdf` : rapport détaillé présentant la méthodologie, les résultats empiriques et leur interprétation économique.
+- autres fichiers et scripts : fonctions utilitaires et modules auxiliaires utilisés par le notebook principal.
 
 ## Méthodologie
 
