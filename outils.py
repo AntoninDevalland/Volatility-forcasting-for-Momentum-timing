@@ -14,6 +14,71 @@ from sklearn.model_selection import TimeSeriesSplit
 from tqdm import tqdm
 import itertools
 
+def run_strategy_backtest(
+    predictions,
+    factor_returns,
+    risk_free_rate,
+    model_name,
+    target_vol=0.20,
+    rebalance_freq="D"
+):
+
+    rb = rebalance_dates_mask(predictions, rebalance_freq=rebalance_freq)
+    print(f"Avg Rebalance/Week: {rb.sum()/52:.2f}")
+
+    # Calcul des Poids Cibles
+    weights = mom_vol_target_weights(
+        log_var_mom_fcst=predictions,
+        rb=rb,
+        target_vol_annual=target_vol,
+        w_max=2.0,
+        no_trade_band=0.05
+    )
+
+    daily_weights = expand_daily_weights(weights)
+
+    common_idx = daily_weights.index.intersection(factor_returns.index)
+    daily_weights = daily_weights.loc[common_idx]
+
+    # Calcul du PnL
+    rp = (
+        daily_weights["w_mom"] * factor_returns.loc[common_idx]
+        + daily_weights["w_def"] * risk_free_rate.loc[common_idx]
+    ).dropna()
+
+    metrics = performance_metrics(rp)
+    print(metrics)
+
+    turnover = weights.diff().abs().sum(axis=1).fillna(0.0)
+
+    cost_per_period = 0.001 * turnover
+
+    annual_cost = cost_per_period.mean() * 52
+
+    print(f"Annual Cost: {annual_cost:.5f}")
+    print("\n")
+
+    return metrics, annual_cost
+
+def expand_daily_weights(df):
+    """
+    Prend un DataFrame indexé par date (dates irrégulières)
+    et retourne un DataFrame journalier avec forward-fill.
+    """
+    df = df.sort_index()
+
+    daily_index = pd.date_range(
+        start=df.index.min(),
+        end=df.index.max(),
+        freq="D"
+    )
+
+    return (
+        df
+        .reindex(daily_index)
+        .ffill()
+    )
+
 def rolling_window_forecast(
     y: pd.Series,
     fit_predict_fn,
