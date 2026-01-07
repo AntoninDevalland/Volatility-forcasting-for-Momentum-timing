@@ -10,7 +10,7 @@ L’objectif est d’évaluer à la fois la qualité statistique des prévisions
 
 ## Contenu du dépôt
 
-- `momentum_volatility.ipynb` : notebook principal 
+- `momentum_volatility.ipynb` : notebook principal.
 - `Volatilite_Momentum_Market_Timing` : rapport détaillé présentant la méthodologie, les résultats empiriques et leur interprétation économique.
 - autres fichiers et scripts : fonctions utilitaires et modules auxiliaires utilisés par le notebook principal.
 
