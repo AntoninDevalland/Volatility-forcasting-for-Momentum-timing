@@ -4,8 +4,9 @@ Prévision de la volatilité du facteur Momentum à l’aide de modèles économ
 
 ## Objectif
 
-Ce projet étudie la prévision de la volatilité du facteur Momentum à partir de modèles économétriques classiques (AR, HAR, GARCH) et de méthodes de machine learning (Elastic Net, LightGBM).  
-L’objectif est d’évaluer à la fois la qualité statistique des prévisions et leur utilité économique à travers des stratégies de gestion dynamique du risque.
+Ce projet étudie la prévision de la volatilité du facteur Momentum à partir de modèles économétriques classiques (AR, HAR, GARCH) et de méthodes de machine learning (Elastic Net, LightGBM). 
+
+L’objectif est d’évaluer à la fois la qualité statistique des prévisions et leur impact sur la performance et le contrôle du risque à travers des stratégies de gestion dynamique du risque.
 
 ## Contenu du dépôt
 
@@ -14,6 +15,7 @@ L’objectif est d’évaluer à la fois la qualité statistique des prévisions
   - l’estimation des modèles de prévision de la volatilité,
   - l’évaluation des performances hors échantillon,
   - l’application à des stratégies de volatility targeting.
+- `Prévoir la volatilité pour le market timing du facteur Momentum.pdf` : rapport détaillé présentant la méthodologie, les résultats empiriques et leur interprétation économique.
 
 ## Méthodologie
 
