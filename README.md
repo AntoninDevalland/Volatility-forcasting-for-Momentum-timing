@@ -19,7 +19,8 @@ L’objectif est d’évaluer à la fois la qualité statistique des prévisions
 - Prévision de la variance réalisée hebdomadaire du facteur Momentum  
 - Comparaison de modèles économétriques et de modèles de machine learning  
 - Évaluation hors échantillon des performances prédictives  
-- Application des prévisions à des stratégies d’allocation dynamique du risque
+- Application des prévisions à des stratégies d’allocation dynamique du risque de type volatility targeting.
+- Réallocation dynamique entre le facteur Momentum et des actifs de repli tels que les Treasury Bills ou des facteurs actions défensifs (CMA, RMW, etc.).
 
 ## Données
 
