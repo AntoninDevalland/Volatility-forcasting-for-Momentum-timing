@@ -350,6 +350,9 @@ def sklearn_walk_forward(
             start_val_idx = t - val_window_size
             end_train_idx = start_val_idx
             start_train_idx = end_train_idx - train_window_size
+            
+            if start_train_idx < 0:
+                continue 
 
             # Données Train et Val
             X_train = X.iloc[start_train_idx: end_train_idx]
