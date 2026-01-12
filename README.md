@@ -33,5 +33,5 @@ Toutes les variables sont observables en temps réel afin d’éviter toute fuit
 ## Résultats principaux
 
 - Les stratégies de volatility targeting permettent de presque doubler le ratio de Sharpe du facteur Momentum.
-- Les modèles de machine learning apportent des améliorations modestes mais robustes par rapport aux benchmarks économétriques.
+- Les modèles de machine learning apportent des améliorations de prévision par rapport aux benchmarks économétriques.
 
